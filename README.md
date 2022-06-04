@@ -9,6 +9,13 @@ backend for react-books
 * And More
 
 # Routes
+| Route        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| /register    | right-aligned | $1600 |
+| /login     | centered      |   $12 |
+| /logout | are neat      |    $1 |
+| /user | |
+
 Register User
 * `/register`
 Login User
