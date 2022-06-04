@@ -7,3 +7,8 @@ backend for react-books
 * Integration ORM Database Using Gorm
 * File Upload
 * And More
+
+# Routes
+Register
+* `/register`
+
