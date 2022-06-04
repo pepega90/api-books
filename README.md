@@ -9,25 +9,11 @@ backend for react-books
 * And More
 
 # Routes
-| Route        | Are           | Cool  |
+| Route        | Description  | Method  |
 | ------------- |:-------------:| -----:|
-| /register    | right-aligned | $1600 |
-| /login     | centered      |   $12 |
-| /logout | are neat      |    $1 |
-| /user | |
-
-Register User
-* `/register`
-Login User
-* `/login`
-Logout User
-* `/logout`
-Get CUrrent User
-* `/user`
-
-Get All Books
-* `/books`
-Create Books
-* `/books`
-Get/Update/Delete Book with selection id
-* `/books/:id`
+| /register    | Register user | POST |
+| /login     | login user | POST |
+| /logout | logout user | POST |
+| /user | get current login user | POST|
+| /books | get all books / create books |GET/POST|
+| /books/:id | get/update/delete book with selection id |GET/PUT/POST|
