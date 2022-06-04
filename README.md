@@ -9,6 +9,18 @@ backend for react-books
 * And More
 
 # Routes
-Register
+Register User
 * `/register`
+Login User
+* `/login`
+Logout User
+* `/logout`
+Get CUrrent User
+* `/user`
 
+Get All Books
+* `/books`
+Create Books
+* `/books`
+Get/Update/Delete Book with selection id
+* `/books/:id`
