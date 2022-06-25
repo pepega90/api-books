@@ -7,7 +7,6 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/gin_learn/models/book"
 	"github.com/gin_learn/models/usermodel"
-	"github.com/gin_learn/util"
 )
 
 type bookHandler struct {
@@ -49,14 +48,9 @@ func (h *bookHandler) CreateBookHandler(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, gin.H{"message": err.Error()})
 		return
 	}
-	cookie, err := c.Cookie("jwt")
-	id, _ := util.ParseJwt(cookie)
-	uId, _ := strconv.Atoi(id)
-	user := usermodel.User{
-		Id: uint(uId),
-	}
+	current_user := c.MustGet("current_user")
+	user := current_user.(usermodel.User)
 	bookReq.UserId = user.Id
-	util.DB.Find(&user)
 
 	book, err := h.bookService.Create(bookReq)
 
